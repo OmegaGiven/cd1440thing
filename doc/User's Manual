@@ -1,8 +1,10 @@
+USER'S MANUAL
+----------------------
+
 Using Fractal Visualizer
 
 From command line run either of the following;
-    python src/mandelbrot.py [FRACTAL_NAME]
-    python src/julia.py [FRACTAL_NAME]
+    python src/main.py Image FRACTAL_NAME
 
 For FRACTAL_NAME use any of the following
     julia;

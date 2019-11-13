@@ -3,12 +3,6 @@ Contains an array `G` containing `N` colors; when the
     Mandelbrot or Julia fractal function returns an iteration count of a point
     in the complex plane, the corresponding pixel is painted `G[count]`
 '''
-
-# This is the color gradient, which defines the palette that images are drawn
-# in as well as limiting the number of iterations the escape-time algorithm uses
-#
-# TODO: It would be nice to add more or different colors to this list, but it's
-# just so much work to calculate all of the in-between shades!
 grad = [
         '#ffe4b5', '#ffe5b2', '#ffe7ae', '#ffe9ab', '#ffeaa8', '#ffeda4',
         '#ffefa1', '#fff29e', '#fff49a', '#fff797', '#fffb94', '#fffe90',
@@ -26,9 +20,14 @@ grad = [
         '#0093b0', '#008bac', '#0082a9', '#007ba6', '#0073a2', '#006b9f',
         '#00649c', '#005d98', '#005695', '#004f92', '#00498e', '#00438b',
         '#003d88', '#003784', '#003181', '#002c7e', '#00277a', '#002277',
-        ]
+]
+
+
 def getColor(x):
     return grad[x]
 
 def length():
     return len(grad)
+
+def getGrad():
+        return grad

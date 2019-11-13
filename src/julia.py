@@ -13,8 +13,6 @@ def getColorFromGradient(z):
     # c is the Julia Constant; varying this value can yield interesting images
     c = complex(-1.0, 0.0)
 
-    # I feel bad about all of the global variables I'm using.
-    # There must be a better way...
     global grad
     global win
 
@@ -54,13 +52,11 @@ def makePicture(f, i, e):
     canvas.create_image((512, 512), image=photo, state="normal")
     canvas.pack()
 
-    area_in_pixels = 1024 * 1024
 
     # At this scale, how much length and height of the
     # imaginary plane does one pixel cover?
     size = abs(max[0] - min[0]) / 1024.0
 
-    fraction = int(1024 / 64)
     for r in range(1024, 0, -1):
         for c in range(1024):
             x = min[0] + c * size
@@ -154,5 +150,6 @@ photo.write(i + ".png")
 print("Wrote picture " + i + ".png")
 photo.write(i + ".png")
 
-# Call tkinter.mainloop so the GUI remains open
+
+
 mainloop()

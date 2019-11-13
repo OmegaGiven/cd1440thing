@@ -151,5 +151,4 @@ print("Wrote picture " + i + ".png")
 photo.write(i + ".png")
 
 
-
 mainloop()

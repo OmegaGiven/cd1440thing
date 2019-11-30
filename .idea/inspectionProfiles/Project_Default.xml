@@ -9,6 +9,8 @@
           <option value="ImagePainter" />
           <option value="src.ImagePainter.julia" />
           <option value="src.ImagePainter.*" />
+          <option value="src.Julia.Fractal" />
+          <option value="Fractal" />
         </list>
       </option>
     </inspection_tool>

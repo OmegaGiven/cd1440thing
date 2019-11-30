@@ -8,6 +8,8 @@ import Config
 import ImagePainter
 
 image = ""
+
+
 def main():
 
     if len(sys.argv) < 2:
@@ -28,4 +30,6 @@ def main():
         image = sys.argv[1]
 
     ImagePainter.imagePainter(image)
+
+
 main()

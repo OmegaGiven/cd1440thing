@@ -67,7 +67,7 @@ least a little bit about what's going on.  To this end I have provided an
 interactive Mandelbrot program called [src/interactive.py](src/interactive.py).
 
 * Left-Clicking on its Canvas will paint a square region using the same
-  algorithm that the [src/mandelbrot.py](src/mandelbrot.py) program uses,
+  algorithm that the [src/mandelbrot.py](src/Mandelbrot.py) program uses,
   except this program will print the values of the Z parameter at each
   iteration.
 

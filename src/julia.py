@@ -1,19 +1,19 @@
 # Julia Set Visualizer
-from Fractal import Fractal
+import Fractal
 
 
-class Julia:
+class Julia(Fractal):
 
     def __init__(self, config):
         self.config = config
-        self.iterations = config['iterations']
+        self.MAX_ITERATIONS = config['iterations']
 
     """Return the index of the color of the current pixel within the Julia set
     in the gradient array"""
     def count(self, count):
         param = self.config['param']
-        for i in range(self.iterations):
+        for i in range(self.MAX_ITERATIONS):
             count = count * count + param
             if abs(count) > 2:
                 return i
-        return self.iterations - 1
+        return self.MAX_ITERATIONS - 1

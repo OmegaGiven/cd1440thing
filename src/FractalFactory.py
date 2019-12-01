@@ -5,12 +5,24 @@ from read import read
 
 
 class FractalFactory:
+    def makeDefault(self):
+        return {
+            'type': 'mandelbrot',
+            'pixels': 640,
+            'axislength': 4.0,
+            'pixelsize': 0.00625,
+            'iterations': 100,
+            'min': {'x': -2.0, 'y': -2.0},
+            'max': {'x': 2.0, 'y': 2.0},
+            'imagename': 'fullmandelbrot.png'
+        }
+
     def makeFractal(self, file=None):
         if file:
             config = read(file)
         else:
             print('FractalFactory: Creating default fractal')
-            config = makeDefault()
+            config = self.makeDefault()
 
         type = config.get('type')
         if type == 'julia':
@@ -23,15 +35,3 @@ class FractalFactory:
             raise KeyError('no type specified in configuration file')
         else:
             raise NotImplementedError('The supplied type is not supported')
-
-    def makeDefault(self):
-        return {
-            'type': 'mandelbrot',
-            'pixels': 640,
-            'axislength': 4.0,
-            'pixelsize': 0.00625,
-            'iterations': 100,
-            'min': {'x': -2.0, 'y': -2.0},
-            'max': {'x': 2.0, 'y': 2.0},
-            'imagename': 'fullmandelbrot.png'
-        }

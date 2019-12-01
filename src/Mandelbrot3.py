@@ -15,3 +15,6 @@ class Mandelbrot3(Fractal):
             if abs(count) > 2:
                 return i
         return self.MAX_ITERATIONS - 1
+
+    def getIterations(self):
+        return self.MAX_ITERATIONS

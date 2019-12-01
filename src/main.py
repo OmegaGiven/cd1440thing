@@ -21,7 +21,7 @@ def main():
     fractal = factory.makeFractal(file)
 
     factory2 = GradientFactory()
-    gradient = factory2.makeGradient(fractal.iterations, gradientName)
+    gradient = factory2.makeGradient(fractal.getIterations(), gradientName)
 
     ImagePainter(fractal, gradient).display()
 

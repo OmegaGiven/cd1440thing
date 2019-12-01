@@ -3,10 +3,9 @@
 '''
 import os.path
 
-def dictionaryConstructor(file):
+def read(file):
     config = {}
     f = open(file)
-    close(file)
     i = 0
     for line in f:
         i += 1
@@ -22,7 +21,6 @@ def dictionaryConstructor(file):
             config[key] = int(value)
         else:
             config[key] = value
-    f.close()
 
     if "centerx" not in config:
         raise Exception(f"{file} does not contain 'centerx'")

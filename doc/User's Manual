@@ -1,20 +1,37 @@
-USER'S MANUAL
+USER'S MANUAL 2.0
 ----------------------
 
 Using Fractal Visualizer
 
 From command line run either of the following;
-    python src/main.py Image FRACTAL_NAME
+    python src/main.py data/FRACTAL_CONFIG GRADIENT_NAME
 
 For FRACTAL_NAME use any of the following
-    julia;
-        fulljulia
-        hourglass
-        lakes
-    mandelbrot;
-        fullmandelbrot
-        spiral0
-        spiral1
-        seahorse
-        elephants
-        leaf
+    branches.frac
+    bramcjes256.frac
+    burningship.frac
+    connected.frac
+    elephant.frac
+    elephants.frac
+    fulljulia.frac
+    fullmandelbrot.frac
+    funnel-down.frac
+    hourglass.frac
+    lakes.frac
+    leaf.frac
+    lubber.frac
+    mandelfour.frac
+    mandelfull.frac
+    mandelthree.frac
+    minibrot.frac
+    seahorse.frac
+    spiral0.frac
+    spiral1.frac
+    spiral-jetty.frac
+    unconnected.frac
+    wholly-squid.frac
+    zoomed.frac
+
+for GRADIENT_NAME use any of the following:
+    TwoColor
+    GreyScale

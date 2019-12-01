@@ -1,5 +1,5 @@
 # Mandelbrot Set Visualizer
-import Fractal
+from Fractal import Fractal
 
 
 class Mandelbrot(Fractal):

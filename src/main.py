@@ -4,8 +4,8 @@ The driver program; imports other modules, accepts
     on-screen and write a PNG image
 '''
 import sys
-import FractalFactory
-import GradientFactory
+from FractalFactory import FractalFactory
+from GradientFactory import GradientFactory
 
 
 def main():

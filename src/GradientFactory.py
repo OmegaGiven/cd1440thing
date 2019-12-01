@@ -1,5 +1,5 @@
-import GreyScale
-import TwoColor
+from GreyScale import GreyScale
+from TwoColor import TwoColor
 
 
 class GradientFactory:

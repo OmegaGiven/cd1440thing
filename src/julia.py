@@ -1,9 +1,8 @@
 # Julia Set Visualizer
-import Fractal
+from Fractal import Fractal
 
 
 class Julia(Fractal):
-
     def __init__(self, config):
         self.config = config
         self.MAX_ITERATIONS = config['iterations']

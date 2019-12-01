@@ -1,6 +1,6 @@
-import Julia
-import Mandelbrot
-import Mandelbrot3
+from Julia import Julia
+from Mandelbrot import Mandelbrot
+from Mandelbrot3 import Mandelbrot3
 from read import read
 
 
@@ -9,11 +9,11 @@ class FractalFactory:
         if file:
             config = read(file)
         else:
-            print('Printing default fractal')
+            print('FractalFactory: Creating default fractal')
             config = makeDefault()
 
         type = config.get('type')
-        if type == 'julia:':
+        if type == 'julia':
             return Julia(config)
         elif type == 'mandelbrot':
             return Mandelbrot(config)

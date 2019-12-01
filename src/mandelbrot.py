@@ -9,10 +9,10 @@ class Mandelbrot(Fractal):
 
     def count(self, count):
         """Return the color of the current pixel within the Mandelbrot set"""
-        param = complex(self.config['centerx'], self.config['centery'])
+        j = complex(0, 0)
         for i in range(self.MAX_ITERATIONS):
-            count = count * count + param
-            if abs(count) > 2:
+            j = j * j + count
+            if abs(j) > 2:
                 return i
         return self.MAX_ITERATIONS - 1
 

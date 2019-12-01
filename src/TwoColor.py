@@ -7,8 +7,8 @@ class TwoColor(Gradient):
         self.steps = int(iterations)
         blue = Color('blue')
         green = Color('green')
-        self.grad = list(blue.range_to(blue, self.steps))
-        self.grad += list(green.range_to(green, self.steps))
+        self.grad = list(blue.range_to(green, self.steps))
+        self.grad += list(green.range_to(blue, self.steps))
 
     def getColor(self, n):
         return self.grad[n].hex_l

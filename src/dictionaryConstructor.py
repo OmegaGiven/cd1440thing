@@ -3,11 +3,11 @@
 '''
 import os.path
 
-def read(file):
+def dictionaryConstructor(file):
     config = {}
     f = open(file)
+    close(file)
     i = 0
-
     for line in f:
         i += 1
         line = line.strip().lower()
@@ -22,6 +22,7 @@ def read(file):
             config[key] = int(value)
         else:
             config[key] = value
+    f.close()
 
     if "centerx" not in config:
         raise Exception(f"{file} does not contain 'centerx'")

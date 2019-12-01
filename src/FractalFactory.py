@@ -1,7 +1,7 @@
 from Julia import Julia
 from Mandelbrot import Mandelbrot
 from Mandelbrot3 import Mandelbrot3
-from read import read
+import dictionaryConstructor
 
 
 class FractalFactory:
@@ -19,11 +19,10 @@ class FractalFactory:
 
     def makeFractal(self, file=None):
         if file:
-            config = read(file)
+            config = dictionaryConstructor(file)
         else:
             print('FractalFactory: Creating default fractal')
             config = self.makeDefault()
-
         type = config.get('type')
         if type == 'julia':
             return Julia(config)

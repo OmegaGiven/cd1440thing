@@ -4,32 +4,26 @@ The driver program; imports other modules, accepts
     on-screen and write a PNG image
 '''
 import sys
-import Config
-import ImagePainter
-
-image = ""
+import FractalFactory
+import GradientFactory
 
 
 def main():
+    file = None
+    gradientName = 'TwoColor'
+    if len(sys.argv) > 1:
+        file = sys.argv[1]
 
-    if len(sys.argv) < 2:
-        print("Usage: main.py FRACTALNAME")
-        print("Where FRACTALNAME is one of:")
-        for i in Config.getImage():
-            print(f"\t{i}")
-        sys.exit(1)
+    if len(sys.argv) > 2:
+      gradientName = sys.argv[2]
 
-    elif sys.argv[1] not in Config.getImage():
-        print(f"ERROR: {sys.argv[1]} is not a valid fractal")
-        print("Please choose one of the following:")
-        for i in Config.getImage():
-            print(f"\t{i}")
-        sys.exit(1)
+    factory = FractalFactory()
+    fractal = factory.makeFractal(file)
 
-    else:
-        image = sys.argv[1]
+    factory2 = GradientFactory()
+    gradient = factory2.makeGradient(fractal.iterations, gradientName)
 
-    ImagePainter.imagePainter(image)
+    ImagePainter(fractal, gradient).display()
 
 
 main()

@@ -1,5 +1,6 @@
 from GreyScale import GreyScale
 from TwoColor import TwoColor
+from Rainbow import Rainbow
 
 
 class GradientFactory:
@@ -12,5 +13,8 @@ class GradientFactory:
 
         elif type == "GreyScale":
             return GreyScale(iterations)
+
+        elif type == 'Rainbow':
+            return Rainbow(iterations)
 
         raise NotImplementedError("Invalid gradient requested")

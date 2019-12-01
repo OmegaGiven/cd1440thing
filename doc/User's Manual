@@ -35,3 +35,4 @@ For FRACTAL_NAME use any of the following
 for GRADIENT_NAME use any of the following:
     TwoColor
     GreyScale
+    Rainbow

@@ -19,3 +19,5 @@ class Mandelbrot(Fractal):
     def getIterations(self):
         return self.MAX_ITERATIONS
 
+    def getConfig(self):
+        return self.config

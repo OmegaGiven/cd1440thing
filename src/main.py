@@ -6,6 +6,7 @@ The driver program; imports other modules, accepts
 import sys
 from FractalFactory import FractalFactory
 from GradientFactory import GradientFactory
+from ImagePainter import ImagePainter
 
 
 def main():
@@ -15,7 +16,7 @@ def main():
         file = sys.argv[1]
 
     if len(sys.argv) > 2:
-      gradientName = sys.argv[2]
+        gradientName = sys.argv[2]
 
     factory = FractalFactory()
     fractal = factory.makeFractal(file)
@@ -23,7 +24,7 @@ def main():
     factory2 = GradientFactory()
     gradient = factory2.makeGradient(fractal.getIterations(), gradientName)
 
-    ImagePainter(fractal, gradient).display()
+    ImagePainter(fractal, gradient).show()
 
 
 main()

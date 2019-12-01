@@ -6,7 +6,7 @@ class GradientFactory:
 
     def makeGradient(self, iterations, type):
 
-        if type == "BinaryColor" or type is None:
+        if type == "TwoColor" or type is None:
             print("GradientFactory: Creating default color gradient")
             return TwoColor(iterations)
 

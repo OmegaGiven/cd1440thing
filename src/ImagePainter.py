@@ -26,7 +26,7 @@ class ImagePainter:
 
     def paint(self, photo, window):
         """Paint a Fractal image into the TKinter PhotoImage canvas."""
-        min = self.fractal['min']
+        min = self.fractal.getConfig()['min']
         self.makeCanvas(photo, window)
         for row in range(self.size, 0, -1):
             for column in range(self.size):
@@ -34,7 +34,7 @@ class ImagePainter:
                 y = min['y'] + row * self.pixelSize
                 i = complex(x, y)
                 color = self.gradient.getColor(self.fractal.count(i))
-                photo.out(color, column, self.size - row)
+                photo.put(color, (column, self.size - row))
             window.update()
 
     def makeCanvas(self, photo, window):
